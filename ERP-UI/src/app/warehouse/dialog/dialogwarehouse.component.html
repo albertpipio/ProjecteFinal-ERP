@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>{{warehouse != null ? 'Edit Warehouse Item' : 'New Item'}}</h1>
+<h3>ID is assigned automatically</h3>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Category</mat-label>
+        <input matInput [(ngModel)]="category">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-raised-button (click)="close()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="warehouse!= null ? editWarehouse() : addWarehouse()">Save</button>
+</div>

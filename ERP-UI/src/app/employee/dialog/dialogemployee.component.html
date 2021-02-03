@@ -1,0 +1,50 @@
+<h1 mat-dialog-title>{{employee != null ? 'Edit Employee' : 'New Employee'}}</h1>
+
+<!-- <h3>ID is assigned automatically</h3> -->
+
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="name">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Surname</mat-label>
+        <input matInput [(ngModel)]="surname">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="email">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Past Orders</mat-label>
+        <input matInput [(ngModel)]="pastOrders">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Completed Orders</mat-label>
+        <input matInput [(ngModel)]="completedOrders">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Salary</mat-label>
+        <input matInput [(ngModel)]="salary">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-raised-button (click)="close()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="employee!= null ? editEmployee() : addEmployee()">Save</button>
+</div>

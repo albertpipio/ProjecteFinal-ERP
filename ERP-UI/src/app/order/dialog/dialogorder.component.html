@@ -1,0 +1,69 @@
+<h1 mat-dialog-title>{{order != null ? 'Edit Order' : 'New Order'}}</h1>
+<h3>ID is assigned automatically</h3>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Status</mat-label>
+        <input matInput [(ngModel)]="status">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Priority</mat-label>
+        <input matInput [(ngModel)]="priority">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Client</mat-label>
+        <input matInput [(ngModel)]="client">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Employee</mat-label>
+        <input matInput [(ngModel)]="employee">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Date of Creation</mat-label>
+        <input matInput [(ngModel)]="dateOfCreation">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Date of Assignment</mat-label>
+        <input matInput [(ngModel)]="dateOfAssignment">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Date of Completion</mat-label>
+        <input matInput [(ngModel)]="dateOfCompletion">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Address</mat-label>
+        <input matInput [(ngModel)]="address">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Price</mat-label>
+        <input matInput [(ngModel)]="price">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-raised-button (click)="close()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="order!= null ? editOrder() : addOrder()">Save</button>
+</div>
